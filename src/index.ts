@@ -55,7 +55,7 @@ async function runJestCommand(cmd = ""): Promise<void> {
   const jestBinCmd = await makeJestBinCmd()
   const jestConfigCmd = await makeJestConfigCmd()
 
-  await openTerminal(`${jestBinCmd} ${jestConfigCmd} ${cmd}`)
+  await openTerminal(`npm test -- --watch ${cmd}`)
 }
 
 let terminalBufnr
